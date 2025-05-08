@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+        "todo_mcp_server": {
+            "command": "uv",
+            "args": [
+                "--directory",
+                "/Users/christopher.rozario/Documents/Agentive AI/Projects/mcp-todo-app",
+                "run",
+                "server.py"
+            ]
+        }
+    }
+}

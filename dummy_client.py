@@ -1,7 +1,7 @@
 
 import asyncio
 from mcp import ClientSession
-from mcp.client.sse import sse_client
+from mcp.client.stdio import stdio_client
 from mcp import StdioServerParameters
 from config import server_url
 
@@ -12,7 +12,7 @@ async def run_client_session():
         env=None
     )
 
-    async with sse_client(server_url()) as (reader, writer):
+    async with stdio_client(server_params) as (reader, writer):
         async with ClientSession(reader, writer) as session:
             await session.initialize()
             result = await session.list_tools()

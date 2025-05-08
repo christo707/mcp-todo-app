@@ -1,6 +1,6 @@
 # MCP Todo App
 
-A simple yet powerful Todo application built using FastMCP, providing a clean and efficient way to manage your tasks.
+A powerful Todo application built using FastMCP, enhanced with LLM agent capabilities powered by Ollama qemu2.5. This application provides an intelligent and efficient way to manage your tasks with natural language understanding and automated task processing.
 
 ## Features
 
@@ -10,11 +10,20 @@ A simple yet powerful Todo application built using FastMCP, providing a clean an
 - Delete todo items
 - In-memory storage for quick access
 - RESTful API interface
+- Natural language task creation and management
+- Intelligent task categorization and prioritization
+- Automated task scheduling and reminders
+- Smart task completion suggestions
+- Context-aware task organization
+- Natural language queries for task information
+- Automated task follow-ups and status updates
 
 ## Prerequisites
 
 - Python 3.10 or higher
 - FastMCP 2.2.10 or higher
+- Ollama qemu2.5
+- Docker (for running Ollama)
 
 ## Installation
 
@@ -35,6 +44,12 @@ source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
 pip install -e .
 ```
 
+4. Set up Ollama:
+```bash
+# Pull the qemu2.5 model
+ollama pull qemu2.5
+```
+
 ## Running the Application
 
 ### Development Mode
@@ -51,7 +66,7 @@ python server.py
 
 ## API Endpoints
 
-The application provides the following API endpoints:
+The TODO MCP provides the following API endpoints:
 
 - `create_todo`: Create a new todo item
   - Required: title
@@ -69,12 +84,7 @@ The application provides the following API endpoints:
 - `delete_todo`: Delete a todo item
   - Required: todo_id
 
-## Project Structure
 
-- `server.py`: Main server implementation with API endpoints
-- `client.py`: Client implementation for interacting with the server
-- `config.py`: Configuration settings
-- `main.py`: Entry point for the application
 
 ## License
 

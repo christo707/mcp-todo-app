@@ -7,9 +7,8 @@ from config import Config
 
 # Initialize FastMCP server
 mcp = FastMCP(name="todo-app",
-              host=Config.Server.HOST,
-              port=Config.Server.PORT,
-              sse_path=Config.Server.SSE_PATH)
+              host=Config.ServerStdIo.HOST,
+              port=Config.ServerStdIo.PORT)
 
 # In-memory storage for todos
 todos = []
@@ -94,4 +93,4 @@ if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "dev":
         mcp.run()  # Run without transport for dev server
     else:
-        mcp.run(transport=Config.Server.TRANSPORT)  # Run with stdio for direct execution
+        mcp.run(transport=Config.ServerStdIo.TRANSPORT)  # Run with stdio for direct execution
