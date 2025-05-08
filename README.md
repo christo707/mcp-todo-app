@@ -22,7 +22,7 @@ A powerful Todo application built using FastMCP, enhanced with LLM agent capabil
 
 - Python 3.10 or higher
 - FastMCP 2.2.10 or higher
-- Ollama qemu2.5
+- Ollama qwen.5
 - Docker (for running Ollama)
 
 ## Installation
@@ -46,8 +46,8 @@ pip install -e .
 
 4. Set up Ollama:
 ```bash
-# Pull the qemu2.5 model
-ollama pull qemu2.5
+# Pull the qwen2.5 model
+ollama pull qwen2.5
 ```
 
 ## Running the Application
